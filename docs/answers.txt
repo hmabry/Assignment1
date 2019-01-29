@@ -1,0 +1,55 @@
+a) 
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 715 bytes | 715.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/hmabry/Assignment1.git
+   3d361dd..7ebe7ec  master -> master
+
+b) There have been 8 commits. There should be 5 total (3 for me) but I messed up some stuff and redid it.
+I got this info like this:
+git shortlog -s -n
+     6  heaven
+     2  Javier Escobar-Avila
+
+c) The file was last modified on Thu Jan 10 16:45:38 2019 -0500. I used git log -- .gitignore for this.
+
+d) You use branching to develop new features separate from one another, which makes it easier for
+multiple developers to work on the same things at a time. It also allows for easier merging in the future. 
+
+e) git status displays the modified files in your current working directory staged for your next commit, 
+while git log shows all commits in the current branch's history.
+
+f) In order to see the commit messages where Weapon.h was one of the committed files, you can 
+use git log --follow Weapon.h. 
+
+g) In order to search for specific commit messages, you can use the command
+git log --grep "file", where file can be replaced with any keyword.
+
+h)
+-Inheritance: Inheritance allows new objects to have access to the information from existing objects.
+-Polymorphism: Polymorphism allows classes with different functionality to share the same interface.
+-Encapsulation: A way to keep data "encapsulled" inside a class. The important data is set to private
+or public depending on if it should be hidden, and it is then acessed via getter and setter functions. 
+
+i) In the "Integration Manager" scheme, each developer pushes to their own public repository and pulls
+from the main repository. The integration manager takes what's in the developers' public repositories
+and puts it all together in a way that avoids integration conflicts. In this way, the developers have
+one "manager" who sorts all the changes and makes all the pushes. In the dictator/lieutenant scheme, each developer pulls from the main repository and pushes changes
+to their assigned lieutenant repository. The lieutenant then sorts conflicts and merges changes.
+The dictator then merges changes and sorts any more conflicts in the lieutenant repositories. Only the
+dictator can push to the main repo. In this way, the developers have several "managers" to check any
+conflicts, so there's more people and steps before something is finally pushed and not all responsibility
+falls on one manager.
+
+j) With 100 developers using a centralized workflow, it's much easier for one of them to make a mistake
+with conflict resolution, resulting in a problematic push, whereas the lieutenant/dictator scheme 
+would allow a lot more error checking at both the lieutenant and dictator step, before the push would
+be finalized by the dictator. 
+
+
+
+
