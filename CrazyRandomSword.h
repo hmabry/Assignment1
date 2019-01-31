@@ -7,14 +7,19 @@
 #define CRAZYRANDOMSWORD_H
 using namespace std;
 
-//random number generation technique below found on StackOverflow
 
-
+	
 class CrazyRandomSword : public Weapon {
 public:
 
-    CrazyRandomSword() : Weapon("Crazy random sword", 25) 
+    CrazyRandomSword() : Weapon("Crazy random sword", 29) 
 	{
+		/*
+		//random number generation technique below found on StackOverflow
+		std::random_device rd;
+		std::mt19937 gen( rd());
+		std::uniform_int_distribution<> dis(7, 100);
+		double rando = dis(gen);*/
     }
 
     virtual ~CrazyRandomSword() {};
