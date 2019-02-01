@@ -32,7 +32,7 @@ git log --grep "file", where file can be replaced with any keyword.
 h)
 -Inheritance: Inheritance allows new objects to have access to the information from existing objects.
 -Polymorphism: Polymorphism allows classes with different functionality to share the same interface.
--Encapsulation: A way to keep data "encapsulled" inside a class. The important data is set to private
+-Encapsulation: A way to keep data "encapsulated" inside a class. The important data is set to private
 or public depending on if it should be hidden, and it is then acessed via getter and setter functions. 
 
 i) In the "Integration Manager" scheme, each developer pushes to their own public repository and pulls
@@ -49,6 +49,15 @@ j) With 100 developers using a centralized workflow, it's much easier for one of
 with conflict resolution, resulting in a problematic push, whereas the lieutenant/dictator scheme 
 would allow a lot more error checking at both the lieutenant and dictator step, before the push would
 be finalized by the dictator. 
+
+5) 
+
+-Is it using polymorphism? --> Yes, because we have objects that act differently depending on context.
+It's easy to identify it here by seeing the "virtual" keyword. 
+
+-Is it using encapsulation? --> Yes, because the game is using information hiding via public/private/protected
+keywords. Access to the important data is being controlled by the getter functions.
+
 
 
 
