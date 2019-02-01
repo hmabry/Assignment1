@@ -6,7 +6,6 @@ double CrazyRandomSword::hit(double armor) {
 	std::mt19937 gen( rd());
 	std::uniform_int_distribution<> dis(2, (0.33 * armor));
 	double ignore = dis(gen);
-	cout << "Ignore amount = " << ignore << std::endl;
 	
 	double damage = hitPoints + ignore - armor;
 	

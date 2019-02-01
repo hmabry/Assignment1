@@ -1,25 +1,19 @@
 #include <string>
+#include <stdio.h> 
 #include "Weapon.h"
 #include <iostream>
-#include <random>
+#include <cstdlib>
+#include <stdlib.h>
 
 #ifndef CRAZYRANDOMSWORD_H
 #define CRAZYRANDOMSWORD_H
-using namespace std;
 
-
-	
 class CrazyRandomSword : public Weapon {
 public:
-
-    CrazyRandomSword() : Weapon("Crazy random sword", 29) 
+	//added rando to the initialization list of CrazyRandomSword in order to pass a random number without multiple definitions 
+    CrazyRandomSword(double rando) : Weapon("Crazy random sword", rando)
 	{
-		/*
-		//random number generation technique below found on StackOverflow
-		std::random_device rd;
-		std::mt19937 gen( rd());
-		std::uniform_int_distribution<> dis(7, 100);
-		double rando = dis(gen);*/
+		
     }
 
     virtual ~CrazyRandomSword() {};

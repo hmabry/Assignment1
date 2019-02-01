@@ -10,9 +10,7 @@
 #include <iostream>
 #include "Weapon.h"
 #include "WeaponFactory.h"
-
 using namespace std;
-
 /**
  * Simulates the behavior of a weapon in the presence and absence of armor, by 
  * printing its damage on standard output. 
