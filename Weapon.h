@@ -6,15 +6,19 @@
  */
 
 #include <string>
+#include <random>
 
 #ifndef WEAPON_H
 #define WEAPON_H
+
+using namespace std;
 
 /**
  * Defines the specification of a weapon. A weapon must define its hitpoints
  * as well as its behavior in the presence of armor. If there is no armor, the 
  * weapon inflicts damage equals to its hitpoints. 
- */
+ */	
+
 class Weapon {
 protected:
     /**
@@ -31,6 +35,9 @@ public:
      * @param name Weapon's name
      * @param hitPoints Weapon's hitpoints
      */
+	//random number generation technique below found on StackOverflow
+
+	
     Weapon(std::string name, double hitPoints)
             : name(name),
               hitPoints(hitPoints) {} //This is equivalent to this.name = name and this.hitpoints = hitpoitns;

@@ -10,9 +10,7 @@
 #include <iostream>
 #include "Weapon.h"
 #include "WeaponFactory.h"
-
 using namespace std;
-
 /**
  * Simulates the behavior of a weapon in the presence and absence of armor, by 
  * printing its damage on standard output. 
@@ -36,6 +34,18 @@ int main(int argc, char** argv) {
     delete(weapon);
 
     weapon = WeaponFactory::getInstance()->getWeapon("spear");
+    simulateWeapon(weapon, armor);
+    delete(weapon);
+	
+	weapon = WeaponFactory::getInstance()->getWeapon("hammer");
+    simulateWeapon(weapon, armor);
+    delete(weapon);
+	
+	weapon = WeaponFactory::getInstance()->getWeapon("random");
+    simulateWeapon(weapon, armor);
+    delete(weapon);
+	
+	weapon = WeaponFactory::getInstance()->getWeapon("pan");
     simulateWeapon(weapon, armor);
     delete(weapon);
 
